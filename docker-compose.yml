@@ -1,0 +1,11 @@
+services:
+  k6-loadtest:
+    build: .
+    environment:
+      - TARGET_HOST=https://change-me.example/
+      - ENDPOINTS=/
+    volumes:
+      - ./results:/app/results
+      - ./loadtest.js:/app/loadtest.js
+      - ./config:/app/config
+    command: ["-c", "/app/config/default.json", "run", "--out", "json=/app/results/results.json", "/app/loadtest.js"]

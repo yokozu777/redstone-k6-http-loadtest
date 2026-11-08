@@ -1,0 +1,17 @@
+# Test results
+results/*.json
+results/*.csv
+results/*.html
+
+# Logs
+*.log
+
+# Temporary files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
